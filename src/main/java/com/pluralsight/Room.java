@@ -6,6 +6,7 @@ public class Room {
     private boolean isOccupied;
     private boolean isDirty;
 
+    //methods for variables
     public Room(int numberOfBeds, double price, boolean isOccupied, boolean isDirty) {
         this.numberOfBeds = numberOfBeds;
         this.price = price;
@@ -45,7 +46,7 @@ public class Room {
         isDirty = dirty;
     }
 
-    // This correctly calculates availability based on whether it's clean and unoccupied
+    // This calculates availability based on whether it's clean and unoccupied
     public boolean isAvailable() {
         return !isOccupied && !isDirty;
     }

@@ -3,7 +3,7 @@ package com.pluralsight;
 public class Main {
     public static void main(String[] args) {
         // 1. Test the Room class
-        // Parameters: numberOfBeds, price, isOccupied, isDirty
+        // Parameters -> numberOfBeds, price, isOccupied, isDirty
         Room room1 = new Room(2, 124.00, false, false);
 
         System.out.println("--- Room Details ---");
