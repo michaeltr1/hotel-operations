@@ -17,7 +17,9 @@ public class Reservations {
         return roomType;
     }
 
-    public void setRoomType() {
+    // Added (String roomType) parameter so it actually updates the field
+    public void setRoomType(String roomType) {
+        this.roomType = roomType;
     }
 
     public double getPrice() {
@@ -27,26 +29,31 @@ public class Reservations {
             price = 124;
         }
         if (isWeekend) {
-            price = price * 1.1;
-
+            // Removed the stray '-' and added the '*' multiplication operator
+            price = price * 1.10;
         }
+        // Moved return price; outside of the if block so it always returns a value
+        return price;
     }
 
-
-    public int numberOfNights(){
+    public int getNumberOfNights(){
         return numberOfNights;
+    }
+
+    // Changed return type from int to void (standard for setters)
+    public void setNumberOfNights(int numberOfNights) {
+        this.numberOfNights = numberOfNights;
     }
 
     public boolean isWeekend() {
         return isWeekend;
     }
-    public double reservationTotal(){
-        return reservationTotal;
+
+    public void setWeekend(boolean weekend){
+        isWeekend = weekend;
+    }
+
+    public double getReservationTotal(){
+        return getPrice() * numberOfNights;
     }
 }
-
-
-
-
-
-

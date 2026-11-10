@@ -1,18 +1,29 @@
 package com.pluralsight;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
+        // 1. Test the Room class
+        // Parameters: numberOfBeds, price, isOccupied, isDirty
+        Room room1 = new Room(2, 124.00, false, false);
 
+        System.out.println("--- Room Details ---");
+        System.out.println("Number of Beds: " + room1.getNumberOfBeds());
+        System.out.println("Price: $" + room1.getPrice());
+        System.out.println("Is Occupied: " + room1.isOccupied());
+        System.out.println("Is Dirty: " + room1.isDirty());
+        System.out.println("Is Available: " + room1.isAvailable()); // Should be true since it's not occupied and not dirty
+
+        System.out.println();
+
+        // 2. Test the Reservations class
+        // Parameters: roomType ("king" or "double"), numberOfNights, isWeekend (boolean)
+        Reservations res1 = new Reservations("king", 3, true);
+
+        System.out.println("--- Reservation Details ---");
+        System.out.println("Room Type: " + res1.getRoomType());
+        System.out.println("Number of Nights: " + res1.getNumberOfNights());
+        System.out.println("Is Weekend: " + res1.isWeekend());
+        System.out.println("Calculated Nightly Rate (King + Weekend Surcharge): $" + res1.getPrice());
+        System.out.println("Total Cost for Stay: $" + res1.getReservationTotal());
     }
-
-      //  Person p1, p2, p3;
-// instantiate the Person object
-    //    p1 = new Person("Dana", 63);
-     //   p2 = new Person("Natalie", 37);
-    //    p3 = new Person("Zachary", 31);
-
-
-        }
-
+}
