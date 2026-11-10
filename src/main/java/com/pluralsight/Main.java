@@ -15,8 +15,7 @@ public class Main {
 
         System.out.println();
 
-        // 2. Test the Reservations class
-        // Parameters: roomType ("king" or "double"), numberOfNights, isWeekend (boolean)
+        // Test the Reservations class
         Reservations res1 = new Reservations("king", 3, true);
 
         System.out.println("--- Reservation Details ---");
